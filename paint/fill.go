@@ -61,8 +61,6 @@ func FloodFill(img image.Image, sp image.Point, c color.Color, t uint8) *image.R
 				if isColorMatch(im, pixOffset, matchColor, tSquared) {
 					im.Set(xpos, point.Y, c)
 					visited[pixOffset] = true
-				} else {
-					break
 				}
 			}
 
@@ -83,8 +81,6 @@ func FloodFill(img image.Image, sp image.Point, c color.Color, t uint8) *image.R
 				if isColorMatch(im, pixOffset, matchColor, tSquared) {
 					im.Set(xpos, point.Y, c)
 					visited[pixOffset] = true
-				} else {
-					break
 				}
 			}
 			rightFillEdge := xpos + 1
